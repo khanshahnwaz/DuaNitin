@@ -1,0 +1,148 @@
+{
+  "features": [
+    {
+      "id": "cost",
+      "name": "Cost",
+      "type": "text",
+      "category": "Financials"
+    },
+    {
+      "id": "money_back",
+      "name": "No questions asked Money back guarantee",
+      "type": "check",
+      "category": "Financials"
+    },
+    {
+      "id": "health_expertise",
+      "name": "Health domain expertise and networks",
+      "type": "check",
+      "category": "Expertise"
+    },
+    {
+      "id": "saas_expertise",
+      "name": "SaaS domain expertise and networks",
+      "type": "check",
+      "category": "Expertise"
+    },
+    {
+      "id": "arr_expertise",
+      "name": "1-10$100M ARR revenue growth expertise",
+      "type": "check",
+      "category": "Expertise"
+    },
+    {
+      "id": "geo_expertise",
+      "name": "US, India, UAE expertise and partners",
+      "type": "check",
+      "category": "Expertise"
+    },
+    {
+      "id": "time_to_start",
+      "name": "Time to Start",
+      "type": "text",
+      "category": "Logistics"
+    },
+    {
+      "id": "revenue_accountability",
+      "name": "Revenue Accountability",
+      "type": "check",
+      "category": "Accountability"
+    },
+    {
+      "id": "reliability",
+      "name": "Reliability",
+      "type": "check",
+      "category": "Accountability"
+    },
+    {
+      "id": "pricing",
+      "name": "Pricing",
+      "type": "text",
+      "category": "Financials"
+    },
+    {
+      "id": "ai_dev_partner",
+      "name": "AI software development with US partner",
+      "type": "check",
+      "category": "Expertise"
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "nitin_dua",
+      "name": "Nitin Dua (and team)",
+      "accent": "bg-blue-600",
+      "isRecommended": true,
+      "data": {
+        "cost": "Fractional",
+        "money_back": "Within 7 days of signing agreement",
+        "health_expertise": "Absolutely",
+        "saas_expertise": "Absolutely",
+        "arr_expertise": "Absolutely",
+        "geo_expertise": "Absolutely",
+        "time_to_start": "Within 1 week",
+        "revenue_accountability": "Absolutely",
+        "reliability": "Absolutely",
+        "pricing": "Value for money",
+        "ai_dev_partner": "Yes"
+      }
+    },
+    {
+      "id": "freelance_platforms",
+      "name": "Freelance Platforms",
+      "accent": "bg-gray-500",
+      "isRecommended": false,
+      "data": {
+        "cost": "$",
+        "money_back": "No",
+        "health_expertise": "No",
+        "saas_expertise": "No",
+        "arr_expertise": "No",
+        "geo_expertise": "No",
+        "time_to_start": "Days",
+        "revenue_accountability": "No",
+        "reliability": "No",
+        "pricing": "Commissions",
+        "ai_dev_partner": "No"
+      }
+    },
+    {
+      "id": "in_house_employees",
+      "name": "In-House Employees",
+      "accent": "bg-gray-500",
+      "isRecommended": false,
+      "data": {
+        "cost": "$$",
+        "money_back": "No",
+        "health_expertise": "No",
+        "saas_expertise": "Maybe",
+        "arr_expertise": "Maybe",
+        "geo_expertise": "Maybe",
+        "time_to_start": "Months",
+        "revenue_accountability": "Maybe",
+        "reliability": "Maybe",
+        "pricing": "Benefits",
+        "ai_dev_partner": "Maybe"
+      }
+    },
+    {
+      "id": "traditional_consultants",
+      "name": "Traditional Consultants",
+      "accent": "bg-gray-500",
+      "isRecommended": false,
+      "data": {
+        "cost": "$$$",
+        "money_back": "No",
+        "health_expertise": "Maybe",
+        "saas_expertise": "Maybe",
+        "arr_expertise": "Maybe",
+        "geo_expertise": "Maybe",
+        "time_to_start": "Weeks",
+        "revenue_accountability": "Maybe",
+        "reliability": "Maybe",
+        "pricing": "Get what you pay",
+        "ai_dev_partner": "No"
+      }
+    }
+  ]
+}

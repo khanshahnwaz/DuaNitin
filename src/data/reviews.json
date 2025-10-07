@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "role": "Student",
+    "review": "One of the best courses I’ve taken. Clear explanations and practical exercises.",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/women/45.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mark Lee",
+    "role": "Developer",
+    "review": "The hands-on approach made learning Python fun and engaging.",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/men/33.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Sophie Davis",
+    "role": "Freelancer",
+    "review": "I was able to apply concepts immediately in my projects. Highly recommend!",
+    "rating": 4,
+    "image": "https://randomuser.me/api/portraits/women/22.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Michael Green",
+    "role": "Entrepreneur",
+    "review": "Great balance of theory and practice. Boosted my confidence in coding.",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/men/41.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Emma Brown",
+    "role": "Designer",
+    "review": "Even as a non-tech person, I found this course very accessible and useful.",
+    "rating": 4,
+    "image": "https://randomuser.me/api/portraits/women/31.jpg"
+  },
+  {
+    "id": 6,
+    "name": "James Miller",
+    "role": "Engineer",
+    "review": "Amazing learning journey! The instructor explained everything so clearly.",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/men/54.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Lily Wilson",
+    "role": "Content Creator",
+    "review": "I loved the community aspect. Great interaction and peer support.",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/women/55.jpg"
+  },
+  {
+    "id": 8,
+    "name": "David Martinez",
+    "role": "Teacher",
+    "review": "Perfect for beginners. The pacing was excellent and easy to follow.",
+    "rating": 4,
+    "image": "https://randomuser.me/api/portraits/men/27.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Olivia Harris",
+    "role": "Blogger",
+    "review": "Great structure, engaging content, and helpful exercises.",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/women/72.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Daniel Scott",
+    "role": "Marketer",
+    "review": "Helped me transition into tech smoothly. Practical and insightful.",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/men/76.jpg"
+  }
+]

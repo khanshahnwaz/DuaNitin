@@ -1,0 +1,55 @@
+[
+  {
+    "category": "General",
+    "icon": "fas fa-question-circle",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is Business Growth Consulting?",
+        "answer": "Business Growth Consulting is a service focused on identifying and implementing strategies to help your company scale, increase revenue, improve market share, and optimize operational efficiency. We focus on sustainable, long-term success."
+      },
+      {
+        "id": 2,
+        "question": "Who is this service for?",
+        "answer": "Our services are ideal for Small to Medium-sized Enterprises (SMEs), established startups looking to scale rapidly, and companies experiencing stagnation that need an external perspective to reignite growth."
+      },
+      {
+        "id": 3,
+        "question": "How long does a typical engagement last?",
+        "answer": "Engagement length varies based on the scope. A focused strategic project might take 3-6 months, while a comprehensive growth partnership can extend to 12 months or more for deep-rooted transformation."
+      }
+    ]
+  },
+  {
+    "category": "Strategy & Planning",
+    "icon": "fas fa-chart-line",
+    "questions": [
+      {
+        "id": 4,
+        "question": "What areas of my business will you analyze?",
+        "answer": "We conduct a holistic analysis, typically covering Sales & Marketing, Operational Efficiency, Financial Health, Organizational Structure, and Technological Infrastructure to find critical bottlenecks and opportunities."
+      },
+      {
+        "id": 5,
+        "question": "Will I have to implement the changes myself?",
+        "answer": "We work on a collaborative model. We provide the strategy and a detailed implementation roadmap. Depending on the engagement, we can also offer hands-on support or project management to ensure successful execution."
+      }
+    ]
+  },
+  {
+    "category": "Results & ROI",
+    "icon": "fas fa-hand-holding-usd",
+    "questions": [
+      {
+        "id": 6,
+        "question": "How do you measure success?",
+        "answer": "Success is measured using Key Performance Indicators (KPIs) agreed upon at the start, such as revenue growth, customer acquisition cost (CAC), customer lifetime value (CLV), profit margin, and operational cycle time."
+      },
+      {
+        "id": 7,
+        "question": "What is the typical Return on Investment (ROI)?",
+        "answer": "While ROI varies, our focus is on generating a multi-fold return on your investment through increased efficiency and revenue. We aim for strategies that become self-funding in the long run."
+      }
+    ]
+  }
+]
