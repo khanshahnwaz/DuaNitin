@@ -91,13 +91,12 @@ const scrollToSection = (id) => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <Link
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="hover:text-blue-600 transition-colors text-lg"
+                  <button
+                    onClick={() => scrollToSection(link.id)}
+                    className="hover:text-blue-600 transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </button>
                 </motion.li>
               ))}
 
