@@ -134,7 +134,7 @@ const ComparisonSlider = () => {
   // --- Main Component Structure (Mobile/Desktop Toggle) ---
 
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section id="comparison" className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         {/* ... (Header and Desktop/Mobile structure as before) ... */}
          <div className="text-center my-12">
         
