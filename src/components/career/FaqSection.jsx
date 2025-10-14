@@ -16,14 +16,14 @@ const FaqSection = () => {
   };
 
   return (
-    <section id="faq" className="relative bg-gradient-to-b from-blue-50 via-white to-white py-20 px-6 sm:px-10 lg:px-16 overflow-hidden">
+    <section id="faq" className="relative  py-20 px-6 sm:px-10 lg:px-16 overflow-hidden">
       {/* Decorative Background */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 30%, rgba(191, 219, 254, 0.3), transparent 40%), radial-gradient(circle at 80% 70%, rgba(191, 219, 254, 0.2), transparent 40%)",
-        }}
+        // style={{
+        //   backgroundImage:
+        //     "radial-gradient(circle at 20% 30%, rgba(191, 219, 254, 0.3), transparent 40%), radial-gradient(circle at 80% 70%, rgba(191, 219, 254, 0.2), transparent 40%)",
+        // }}
       ></div>
 
       <div className="relative mx-auto max-w-7xl">
