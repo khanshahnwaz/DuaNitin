@@ -12,7 +12,7 @@ export default function Home() {
       <HeroSection />
       <SubscribeSection/>
       <ReviewsSection/>
-      <FloatingBookingButton/>
+      {/* <FloatingBookingButton/> */}
     </div>
   );
 }

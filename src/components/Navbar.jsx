@@ -30,10 +30,11 @@ export default function Navbar() {
 
   // Link Definitions: The 'id' field is now used as the universal destination path.
   const navLinks = [
-    { name: "Home", id: "hero" },                     // Anchor Link
+    { name: "Home", id: "/" },                     // Anchor Link
     { name: "Career Accelerator", id: "/career" },    // Internal Next.js Page
     { name: "Subscribe", id: "subscribe" },          // Anchor Link
     { name: "Coaching", id: "https://topmate.io/nitindua" }, // External URL
+    {name:"Contact",id:"/contact"},
     { name: "Reviews", id: "reviews" },              // Anchor Link
   ];
 
@@ -115,8 +116,8 @@ export default function Navbar() {
 
         {/* Desktop Button - Assuming this is the 'Book a Call' action, linked to #subscribe */}
         <NavLink 
-          href="#subscribe"
-          onClick={(e) => handleAnchorClick(e, 'subscribe')}
+          href="/contact"
+          onClick={(e) => handleAnchorClick(e, '/contact')}
           className="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-md active:scale-95"
           >
           <motion.span
@@ -124,7 +125,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.95 }}
             className="block"
           >
-            Book a Call
+            Contact Me
           </motion.span>
         </NavLink>
 
@@ -171,11 +172,11 @@ export default function Navbar() {
               })}
 
               <NavLink 
-                href="#subscribe"
-                onClick={(e) => handleAnchorClick(e, 'subscribe')}
+                href="/contact"
+                onClick={(e) => handleAnchorClick(e, '/contact')}
                 className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-md active:scale-95"
               >
-                Book a Call
+                Contact Me
               </NavLink>
             </ul>
           </motion.div>

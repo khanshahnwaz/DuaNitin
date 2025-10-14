@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import profileImg from "../../public/profile.jpg"; // replace with your image
 import FloatingBookingButton from "./FloatingBookingButton";
+import SubscribeInput from "./SubscribeInput";
 
 export default function HeroSection() {
   return (
@@ -27,7 +28,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-5 text-lg text-gray-600 max-w-md mx-auto md:mx-0"
+          className="my-5 text-lg text-gray-600 max-w-md mx-auto md:mx-0"
         >
           
 
@@ -37,26 +38,7 @@ Business Development in the US, India, Middle-East
 
         </motion.p>
 
-        {/* Email Input + Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center gap-4 my-8 w-full"
-        >
-          <input
-            type="email"
-            placeholder="youremail@website.com"
-            className="flex-1 w-full px-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-          />
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg w-full sm:w-auto"
-          >
-            Subscribe
-          </motion.button>
-        </motion.div>
+        <SubscribeInput/>
       </motion.div>
 
       {/* Right Section (Profile Image) */}

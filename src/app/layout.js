@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
             "radial-gradient(circle at 20% 30%, rgba(191, 219, 254, 0.3), transparent 40%), radial-gradient(circle at 80% 70%, rgba(191, 219, 254, 0.2), transparent 40%)",
         }}
       >
+        
         {children}
         <Footer/>
       </body>

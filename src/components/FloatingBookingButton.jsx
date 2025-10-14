@@ -11,13 +11,13 @@ const FloatingBookingButton = () => {
   const toggleModal = () => setIsOpen(!isOpen);
 
   // Auto-open modal after 10 seconds (only once)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-      setAutoOpened(true);
-    }, 10000); // open after 10 seconds
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsOpen(true);
+  //     setAutoOpened(true);
+  //   }, 10000); // open after 10 seconds
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <>
