@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import IntroVideo from "./workshop/IntroVideo";
 // can be shift in json format
 // --- Service Data ---
 const services = [
@@ -61,6 +62,7 @@ const item = {
 
 const ServiceCard = ({ service }) => {
   return (
+    <>
     <motion.div
       variants={item}
       whileHover={{ 
@@ -101,6 +103,8 @@ const ServiceCard = ({ service }) => {
         </a>
       </div>
     </motion.div>
+    
+    </>
   );
 };
 
@@ -123,7 +127,7 @@ export default function ServicesSection() {
             My Services: <span className="text-blue-700">Find Your Path to Growth</span>
           </h2>
           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            I offer focused pathways to help you achieve **mental clarity, career elevation, and business scale**.
+            I offer focused pathways to help you achieve &quot;mental clarity, career elevation, and business scale&quot;.
           </p>
         </motion.div>
 
@@ -140,6 +144,7 @@ export default function ServicesSection() {
           ))}
         </motion.div>
       </div>
+      <IntroVideo/>
     </section>
   );
 }

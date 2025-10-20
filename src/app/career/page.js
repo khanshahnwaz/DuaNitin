@@ -6,6 +6,8 @@ import BookingScheduler from '@/components/career/BookingScheduler'
 import ComparisonSlider from '@/components/career/ComparisonSlider';
 import FaqSection from '@/components/career/FaqSection';
 import AboutSection from '@/components/career/About';
+import VideoTestimonialSection from '@/components/career/VideoTestimonials';
+import CaseStudiesSection from '@/components/career/CaseStudy';
 // Import other components (Testimonials, PricingTable, About) when created
 
 export default function Home() {
@@ -17,7 +19,10 @@ export default function Home() {
         <Hero />
         <Stats />
         <BookingScheduler/>
+        <VideoTestimonialSection/>
+        <CaseStudiesSection/>
         <AboutSection/>
+
         <ComparisonSlider/>
         <FaqSection/>
         
