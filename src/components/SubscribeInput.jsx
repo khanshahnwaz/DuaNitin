@@ -47,7 +47,7 @@ export default function SubscribeInput() {
         placeholder="youremail@website.com"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="flex-1 px-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black shadow-sm"
+        className="w-full flex-1 px-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black shadow-sm"
       />
       <button
         type="submit"

@@ -66,9 +66,9 @@ export default function SubscribeSection() {
           Join <span className="text-blue-700">65,000+</span> Creators
         </h2>
         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-          Subscribe to the <span className="font-semibold">Creator Science</span> newsletter
-          for real-life experiments, expert interviews, and
-          evidence-backed advice every week.
+          We Empower You Skills to Transform
+Your Career, Mind Health Confusion.
+Train Mind for Clarity & Progress ❤
         </p>
 
         <SubscribeInput/>

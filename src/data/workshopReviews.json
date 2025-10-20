@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Payal D.",
+    "review": "After coaching with Nitin, I feel a sense of joy and lightness. It's as if I've been granted the gentle wings of a bird, instilling me with the humble trust that I too can soar and reach new heights, limitless in my potential.",
+    "role": "Senior Consultant"
+  },
+  {
+    "id": 2,
+    "name": "Ruchi",
+    "review": "I'd definitely like to thank Mr. Nitin Dua for the marvellous (workshop) session we had. It was very deep and honest from the bottom of his heart and I really feel he's a true person. He's really got a good soul and he's got an excellent aura and the positive vibes that we are attracted to. So I feel everybody should really follow the things he is telling. It's good for your mental health also. Thank you so much for your coaching.",
+    "role": "Founder, Tech Startup"
+  },
+  {
+    "id": 3,
+    "name": "Veena",
+    "review": "It was practical with no theories and made me more self aware and happy. I feel grateful, optimistic and enthusiastic about what I can do further in my own life to improve.",
+    "role": "Engineering Manager"
+  },
+  {
+    "id": 4,
+    "name": "David C.",
+    "review": "Nitin, I valued the learner attitude and your setting an example of what you want from others, expressing in a systematic and humble way which was easy to understand. I am going home with a positive attitude and very relaxed.",
+    "role": "Director of Product"
+  },
+  {
+    "id": 5,
+    "name": "Neerja",
+    "review": "Thank you Nitin for this gift, I feel calm and energetic at the same time. It was very clear, effective and thought provoking. Grateful for the opportunity. Thank you Nitin.",
+    "role": "HR Professional"
+  },
+  {
+    "id": 6,
+    "name": "Amit S.",
+    "review": "Nitin's coaching was instrumental in helping me break through a long-standing career plateau. His blend of neuroscience and personal strategy is genuinely unique and delivered immediate results.",
+    "role": "Chief Operating Officer"
+  }
+]

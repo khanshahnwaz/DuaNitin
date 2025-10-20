@@ -31,10 +31,12 @@ export default function Navbar() {
   // Link Definitions: The 'id' field is now used as the universal destination path.
   const navLinks = [
     { name: "Home", id: "/" },                     // Anchor Link
-    { name: "Career Accelerator", id: "/career" },    // Internal Next.js Page
-    { name: "Subscribe", id: "subscribe" },          // Anchor Link
-    { name: "Coaching", id: "https://topmate.io/nitindua" }, // External URL
+    { name: "Growth Consulting", id: "/career" },    // Internal Next.js Page
+              // Anchor Link
+    { name: "Coaching", id: "/coaching" }, // External URL
+    { name: "Join Workshop", id: "/workshop" }, // External URL
     {name:"Contact",id:"/contact"},
+    { name: "Subscribe", id: "subscribe" },
     { name: "Reviews", id: "reviews" },              // Anchor Link
   ];
 
