@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
+// can be shift in json format
 // --- Service Data ---
 const services = [
   {
