@@ -14,7 +14,7 @@ const ServicesGrid = ({containerVariants,itemVariants}) => {
             discountedPrice: "₹489",
             icon: "📞",
             color: "bg-indigo-600",
-            link: 'https://topmate.io/nitindua/1598315?utm_source=public_profile&utm_campaign=nitindua'
+            link: '/booking'
         },
         {
             type: "Workshop",
@@ -25,7 +25,7 @@ const ServicesGrid = ({containerVariants,itemVariants}) => {
             discountedPrice: "₹19,899",
             icon: "💡",
             color: "bg-blue-600",
-            link: 'https://topmate.io/nitindua/1598277/pay?utm_source=public_profile&utm_campaign=nitindua' // Link to the workshop page
+            link: '/bookingPage' // Link to the workshop page
         },
         {
             type: "Digital Product",

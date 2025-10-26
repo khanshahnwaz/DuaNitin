@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 // 0. StickyHeader Component (Reused for Consistency)
 const StickyHeader = () => {
   return (
@@ -19,7 +21,7 @@ const StickyHeader = () => {
           </nav>
         </div>
         <a 
-          href={COACHING_LINK}
+          href='/booking'
           className="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-colors"
         >
           Schedule a 15 mins. Call →
@@ -28,3 +30,5 @@ const StickyHeader = () => {
     </motion.header>
   );
 };
+
+export default StickyHeader;

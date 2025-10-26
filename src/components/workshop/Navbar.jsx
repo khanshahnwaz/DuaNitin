@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 const StickyHeader = () => {
   return (
     <motion.header
@@ -23,13 +23,13 @@ const StickyHeader = () => {
         </div>
 
         {/* CTA Button */}
-        <a 
-        target="_blank"
-          href='https://topmate.io/nitindua/1598315'
+        <Link 
+        
+          href='/booking'
           className="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full bg-blue-600 text-white shadow-md hover:bg-blue-700 transition-colors"
         >
           Schedule a 15 mins. Call →
-        </a>
+        </Link>
       </div>
     </motion.header>
   );

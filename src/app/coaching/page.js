@@ -4,7 +4,7 @@ import WIPFrameworkSection from "@/components/coaching/FrameWork";
 import MediaShowcase from "@/components/coaching/MediaShowCase";
 import ProfileHero from "@/components/coaching/ProfileHero";
 import ServicesGrid from "@/components/coaching/ServiceGrid";
-import StickyHeader from "@/components/workshop/Navbar";
+import StickyHeader from "@/components/coaching/StickyHeader";
 
 
 

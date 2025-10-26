@@ -20,6 +20,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <script src="https://checkout.razorpay.com/v1/checkout.js" async></script>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-blue-50 via-white to-blue-100`}
         style={{

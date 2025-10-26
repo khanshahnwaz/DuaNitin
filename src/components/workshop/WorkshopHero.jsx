@@ -58,8 +58,7 @@ const WorkshopHero = ({containerVariants,itemVariants}) => {
 
         {/* CTA Button */}
         <motion.a 
-          target="_blank"
-          href="https://topmate.io/nitindua/1598277/pay"
+          href="/bookingPage"
           className="inline-block px-12 py-4 text-lg font-bold rounded-full bg-blue-600 text-white shadow-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
           variants={itemVariants}
           transition={{ delay: 0.6 }}
