@@ -5,6 +5,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import BookingModal from "@/components/BookingModalContent";
 import FloatingBookingButton from "@/components/FloatingBookingButton";
 import ServicesSection from "@/components/ServiceSection";
+import FloatingQuizWidget from "@/components/FloatingQuizWidget";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <ServicesSection/>
       <SubscribeSection/>
       <ReviewsSection/>
-      {/* <FloatingBookingButton/> */}
+      <FloatingQuizWidget/>
     </div>
   );
 }
