@@ -1,12 +1,16 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { IndianRupee, DollarSign, Loader2, CheckCircle, Calendar, User, Globe, Zap, ChevronLeft } from "lucide-react";
 import moment from "moment-timezone";
+
+// Mock exchange rate: 1 INR = 0.012 USD (Approx. 83 INR/USD)
+const INR_TO_USD_RATE = 0.012; 
 
 export default function PaymentSummary({
   currency,
   setCurrency,
-  displayAmount,
+  displayAmount, // This is the static base INR price (e.g., 489)
+  setTotalDisplayAmount, // Function to update the final numeric amount in parent
   currencySymbol,
   setCurrencySymbol,
   handlePayment,
@@ -16,10 +20,50 @@ export default function PaymentSummary({
   bookingDetails,
   onBack,
 }) {
+  const BASE_INR_AMOUNT = parseFloat(displayAmount);
+  
+  // Local state to hold the base price for display purposes (after conversion)
+  const [convertedBasePriceDisplay, setConvertedBasePriceDisplay] = useState(BASE_INR_AMOUNT.toFixed(2));
+  
+  // Local state for the platform fee (for display)
+  const [platformFeeDisplay, setPlatformFeeDisplay] = useState(0.10);
 
+
+  // CRITICAL: Currency Conversion and Final Amount Calculation
+  useEffect(() => {
+    let basePriceRaw;
+    let feeRaw;
+    let symbol;
+
+    if (currency === "USD") {
+      // 1. Calculate raw USD price
+      basePriceRaw = BASE_INR_AMOUNT * INR_TO_USD_RATE;
+      feeRaw = 0.12; // USD fee
+      symbol = "$";
+    } else { // INR
+      // 1. Use base INR price
+      basePriceRaw = BASE_INR_AMOUNT;
+      feeRaw = 0.10; // INR fee
+      symbol = "₹";
+    }
     
-  const platformFee = currency === "INR" ? 0.10 : 0.12;
-  const totalDisplayAmount = (parseFloat(displayAmount) + platformFee).toFixed(2);
+    // 2. Calculate the FINAL NUMERIC AMOUNT
+    // This raw amount is what's passed to setTotalDisplayAmount (and then to Razorpay)
+    const finalAmountRaw = basePriceRaw + feeRaw;
+
+    // 3. Update Parent State with the FINAL NUMERIC AMOUNT (e.g., 5.99)
+    setTotalDisplayAmount(finalAmountRaw);
+
+    // 4. Update local states for DISPLAY (rounded to 2 decimal places)
+    setConvertedBasePriceDisplay(basePriceRaw.toFixed(2));
+    setPlatformFeeDisplay(feeRaw.toFixed(2));
+    setCurrencySymbol(symbol);
+
+  }, [currency, setCurrencySymbol, BASE_INR_AMOUNT, setTotalDisplayAmount]);
+  
+  // The final total amount for display, calculated from the local display parts
+  const totalDisplayAmountFormatted = (parseFloat(convertedBasePriceDisplay) + parseFloat(platformFeeDisplay)).toFixed(2);
+  
   const isReadyToPay = bookingDetails.time && bookingDetails.name && bookingDetails.email;
 
   const buttonText =
@@ -33,7 +77,7 @@ export default function PaymentSummary({
       ? "Payment Successful!"
       : paymentStatus === "error"
       ? "Payment Failed. Retry?"
-      : "Confirm and Pay";
+      : `Confirm and Pay ${currencySymbol}${totalDisplayAmountFormatted}`; // Display formatted total amount in button
 
   return (
     <div className="p-6 bg-white rounded-xl w-full">
@@ -62,7 +106,7 @@ export default function PaymentSummary({
 
       {/* Currency Selector */}
       <div className="mb-4 flex justify-between items-center bg-gray-100 p-3 rounded-lg">
-        <span className="text-gray-700 font-semibold text-sm">Select Currency:</span>
+        <span className="text-gray-700 font-semibold text-sm">Select Currency (Mock Conversion):</span>
         <div className="flex bg-white rounded-lg p-1 shadow-inner">
           {["INR", "USD"].map((cur) => (
             <button
@@ -83,18 +127,21 @@ export default function PaymentSummary({
       <div className="border-b border-gray-200 pb-3 mb-3">
         <div className="flex justify-between text-sm text-gray-600">
           <span>1 × Discovery Call</span>
-          <span>{currencySymbol}{displayAmount}</span>
+          {/* Use convertedBasePriceDisplay for the item price */}
+          <span>{currencySymbol}{convertedBasePriceDisplay}</span>
         </div>
         <div className="flex justify-between text-xs text-gray-400 mt-1">
-          <span>Platform Fee</span>
-          <span>{currencySymbol}{platformFee.toFixed(2)}</span>
+          <span>Platform Fee ({currency})</span>
+          {/* Use platformFeeDisplay for the fee display */}
+          <span>{currencySymbol}{platformFeeDisplay}</span>
         </div>
       </div>
 
       <div className="flex justify-between font-bold text-lg text-gray-800 mb-4">
         <span>Total:</span>
         <span className="text-2xl font-extrabold text-emerald-600">
-          {currencySymbol}{totalDisplayAmount}
+          {/* Use totalDisplayAmountFormatted for the total */}
+          {currencySymbol}{totalDisplayAmountFormatted}
         </span>
       </div>
 
@@ -107,7 +154,7 @@ export default function PaymentSummary({
               ? "bg-emerald-600"
               : paymentStatus === "error"
               ? "bg-red-500 hover:bg-red-600"
-              : !isReadyToPay
+              : !isReadyToPay || !isRazorpayLoaded || isLoading
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-emerald-500 hover:bg-emerald-600"
           }`}

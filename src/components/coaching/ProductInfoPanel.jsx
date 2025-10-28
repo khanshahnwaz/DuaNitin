@@ -1,69 +1,89 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Minus, Clock, Gift } from "lucide-react";
+import { Clock, Gift, DollarSign, Zap } from "lucide-react"; 
 
 const BOOKING_DURATION_MINS = 15;
 
-export default function ProductInfoPanel() {
+export default function ProductInfoPanel({amount}) {
+  
   return (
+    // Updated container styling for a more premium, card-like look
     <motion.div
       initial={{ opacity: 0, x: -40 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="w-full lg:w-full"
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className="w-full p-6 sm:p-8 bg-white rounded-xl shadow-2xl border-t-4 border-blue-600 transform hover:shadow-2xl transition-shadow duration-300"
     >
-      <div className="flex items-center space-x-2 text-blue-700 mb-6">
-        <Minus size={16} className="transform rotate-90" />
-        <span className="text-sm font-medium">Nitin Dua</span>
+      {/* Coach/Branding Section */}
+      <div className="flex items-center space-x-2 text-blue-700 mb-6 border-b pb-4">
+        <Zap size={20} className="text-blue-500" />
+        <span className="text-base font-semibold tracking-wider uppercase">
+          Coaching with Nitin Dua
+        </span>
       </div>
 
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-        Your First Discovery Call <br /> (Workshop / Coaching)
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-snug mb-4">
+        Your First Discovery Call
       </h2>
 
-      <div className="flex items-center space-x-4 mb-6">
-        <span className="text-2xl font-bold text-red-600">₹489</span>
-        <span className="text-base line-through text-gray-400">₹4,499</span>
-        <div className="flex items-center text-gray-500 ml-4">
-          <Clock size={16} className="mr-1" />
-          <span className="text-sm">{BOOKING_DURATION_MINS} mins meeting</span>
+      {/* Pricing and Duration Section - Made more impactful */}
+      <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-6 p-4 bg-gray-50 rounded-lg border border-gray-100">
+        <div className="flex items-center space-x-2">
+          {/* <DollarSign size={20} className="text-green-600" /> */}
+          <span className="text-3xl font-bold text-green-700">₹{amount}</span>
+          <span className="text-base line-through text-gray-400">₹4,499</span>
+        </div>
+        
+        <div className="flex items-center text-gray-600 ml-0 sm:ml-auto">
+          <Clock size={16} className="mr-2 text-blue-500" />
+          <span className="text-sm font-medium">{BOOKING_DURATION_MINS} minute session</span>
         </div>
       </div>
 
-      <div className="text-gray-700 space-y-4 text-sm">
-        <p>
-          Thank you for your interest in the workshop and/or coaching for
-          yourself. <span className="font-semibold text-blue-700">Take a peek</span> at recent experiential workshops and shared experiences.
+      {/* Description and Expectations */}
+      <div className="text-gray-700 space-y-5">
+        <p className="leading-relaxed">
+          Thank you for your interest in the **Workshop and Coaching**. This is your opportunity to connect directly and see if our partnership is the right fit.
         </p>
 
-        <p className="font-semibold">
-          Book your first discovery call for the workshop and/or coaching directly.
+        <p className="font-bold text-gray-800 text-lg border-b pb-2">
+          What to expect in your call:
+        </p>
+        <ul className="list-none space-y-3">
+          <li className="flex items-start">
+            <span className="text-blue-500 mr-3 text-lg font-bold">1.</span>
+            <span>We'll discuss your specific **career, mindset, and health goals**.</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-500 mr-3 text-lg font-bold">2.</span>
+            <span>I'll share detailed insights on how the program **aligns with your needs**.</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-blue-500 mr-3 text-lg font-bold">3.</span>
+            <span>We'll confirm if this program is a **mutual fit** for long-term success.</span>
+          </li>
+        </ul>
+
+        {/* Bonus/Incentive Box */}
+        <div className="bg-blue-50 p-4 rounded-xl border border-blue-200 shadow-inner text-blue-800 text-sm font-medium">
+          <p className="font-semibold mb-1">Fee Adjustment Guarantee:</p>
+          <p>
+            The ₹{amount} fee will be **fully adjusted** in your final workshop/coaching payment if you sign up within 24 hours of the discovery call.
+            <a href="#" className="text-blue-600 hover:text-blue-700 underline ml-1">
+              (View Workshop Details)
+            </a>
+          </p>
+        </div>
+
+        {/* Risk-Reversal/Value Guarantee */}
+        <p className="text-red-600 font-medium flex items-center pt-2">
+          <Gift size={18} className="inline-block mr-2" /> 
+          **50% Money-Back Guarantee** if you feel you didn’t gain any value from our conversation.
         </p>
 
-        <p className="font-bold text-gray-800 mt-4">What to expect:</p>
-        <ol className="list-decimal list-inside space-y-2 pl-4 text-gray-700">
-          <li>We discuss your career, mind, and health goals.</li>
-          <li>I share insights about the workshop and coaching alignment.</li>
-          <li>We explore whether our program is a mutual fit.</li>
-        </ol>
-
-        <p className="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
-          If yes, this charge will be adjusted in the workshop/coaching fee if
-          you sign up within 24 hours. Workshop details are{" "}
-          <a href="#" className="text-blue-600 underline">
-            here
-          </a>
-          .
-        </p>
-
-        <p className="text-red-600 font-medium">
-          <Gift size={16} className="inline-block mr-1 align-text-bottom" /> If
-          no, 50% money back if you didn’t get any value from our call.
-        </p>
-
-        <p className="mt-4">
-          With gratitude, <br /> <strong>Nitin Dua</strong>
+        <p className="pt-4 text-gray-900 font-semibold">
+          With gratitude, <br /> Nitin Dua
         </p>
       </div>
     </motion.div>
